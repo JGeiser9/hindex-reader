@@ -1,15 +1,15 @@
-extern crate hindex_viewer;
+extern crate hindex_reader;
 extern crate diesel;
 
 // use std::time::{Instant};
-use self::hindex_viewer::*;
+use self::hindex_reader::*;
 use self::models::*;
 use self::diesel::prelude::*;
 use std::io;
 
 fn main() {
     // let now = Instant::now();
-    use hindex_viewer::schema::block::dsl::*; //brings block schema into scope
+    use hindex_reader::schema::block::dsl::*; //brings block schema into scope
     let connection = establish_connection();
 
     println!("******************************************************");
