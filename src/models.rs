@@ -1,0 +1,43 @@
+#[derive(Queryable, Debug)]
+pub struct Block {
+    pub id: i32,
+    pub hash: Option<String>,
+    pub strippedsize: Option<i32>,
+    pub size: Option<i32>,
+    pub height: Option<i32>,
+    pub weight: Option<i32>,
+    pub version: Option<i32>,
+    pub merkleroot: Option<String>,
+    pub witnessroot: Option<String>,
+    pub filterroot: Option<String>,
+    pub reservedroot: Option<String>,
+    pub nonce: Option<String>,
+    pub time: Option<i64>,
+    pub bits: Option<i64>,
+    pub chainwork: Option<String>,
+    pub previousblockhash: Option<String>,
+    pub nextblockhash: Option<String>,
+    pub mined_by: Option<String>,
+    pub total_txs: Option<i64>,
+    pub fees: Option<i64>,
+    pub reward: Option<i64>,
+}
+
+#[derive(Queryable, Debug)]
+pub struct Tx {
+    pub id: i32,
+    pub hash: Option<String>,
+    pub txid: Option<String>,
+    pub witnesshash: Option<String>,
+    pub blockhash: Option<String>,
+    pub size: Option<i64>,
+    pub value: Option<i64>,
+    pub minfee: Option<i64>,
+    pub locktime: Option<i64>,
+    pub fee: Option<i64>,
+    pub rate: Option<i64>,
+    pub height: Option<i64>,
+    pub time: Option<i64>,
+    pub index: Option<i64>,
+    pub version: Option<i64>,
+}
